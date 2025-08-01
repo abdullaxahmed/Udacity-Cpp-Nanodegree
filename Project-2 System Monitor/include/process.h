@@ -10,7 +10,7 @@ class Process {
  public:
   int Pid();                               // TODO: See src/process.cpp
 
-  Process(int pid);
+  Process(int pid);   
 
   std::string User();                      // TODO: See src/process.cpp
   std::string Command();                   // TODO: See src/process.cpp
