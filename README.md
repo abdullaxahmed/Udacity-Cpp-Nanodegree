@@ -8,8 +8,11 @@ The first project focuses on implementing the A* search algorithm to find the sh
 
 <p align="center">
   <img src="images/Route Planning.png" alt="Route Planning Preview" width="600"/>
+</p>
+<p align="center">
   <em>Path computed using A* algorithm over OpenStreetMap data</em>
 </p>
+
 
 <p align="center">
   <a href="https://github.com/abdullaxahmed/Udacity-Cpp-Nanodegree/tree/main/Project-1%20Route%20Planning" style="
