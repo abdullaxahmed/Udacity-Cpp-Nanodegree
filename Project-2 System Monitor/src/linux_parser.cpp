@@ -243,12 +243,15 @@ string LinuxParser::Ram(int pid) {
     while (std::getline(stream, line)) {
       std::istringstream linestream(line);
       linestream >> key;
-      if (key == "VmRSS") {
+      if (key == "VmSize:") {
         linestream >> value;
+        int ram_kb = std::stoi(value);
+        int ram_mb = ram_kb / 1024;
+        return std::to_string(ram_mb); 
       }
     }
   }
-  return value;
+  return "0";  
 }
 
 // TODO: Read and return the user ID associated with a process
@@ -291,17 +294,18 @@ string LinuxParser::User(int pid) {
 // TODO: Read and return the uptime of a process
 // REMOVE: [[maybe_unused]] once you define the function
 long LinuxParser::UpTime(int pid) {
-  string line, value;
-  std::ifstream stream(kProcDirectory + "/" + std::to_string(pid) + kStatFilename);
-  std::vector<string> values;
-  if (stream.is_open()) {
-    std::getline(stream, line);
-    std::istringstream linestream(line);
-    while (linestream >> value) {
-      values.push_back(value);
+    string line, value;
+    std::ifstream stream(kProcDirectory + "/" + std::to_string(pid) + kStatFilename);
+    vector<string> values;
+    if (stream.is_open()) {
+        std::getline(stream, line);
+        std::istringstream linestream(line);
+        while (linestream >> value) {
+            values.push_back(value);
+        }
     }
-  }
-  long start_time = stol(values[21]);
-  long uptime = LinuxParser::UpTime();
-  return uptime - (start_time / sysconf(_SC_CLK_TCK));
+    long start_time = stol(values[21]);                  
+    long uptime = LinuxParser::UpTime();                 
+    const int HZ = 100;                                
+    return uptime - (start_time / HZ);                
 }
