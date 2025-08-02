@@ -26,3 +26,14 @@ The first project focuses on implementing the A* search algorithm to find the sh
     text-decoration: none;
   ">📂 /Project 1</a>
 </p>
+
+## Project 2 – System Monitor
+
+This project involves building a simplified version of the Linux `htop` process viewer using C++. It reads system data from the `/proc` file system and displays CPU usage, memory stats, and running processes. The implementation emphasizes object-oriented programming principles and efficient data parsing.
+
+<p align="center">
+  <img src="images/System Monitor.gif" alt="System Monitor Preview" width="400"/>
+</p>
+<p align="center">
+  <em>System monitor displaying CPU, memory, and process information</em>
+</p>
