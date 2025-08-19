@@ -45,6 +45,26 @@ ChatBot::~ChatBot()
 //// STUDENT CODE
 ////
 
+ChatBot::ChatBot(const ChatBot& source) 
+: _chatLogic(source._chatLogic), _rootNode(source._rootNode), _image(new wxBitmap(*source._image))
+{
+    std::cout << "ChatBot Copy Constructor" << std::endl;
+}
+
+ChatBot &ChatBot::operator=(const ChatBot& source)
+{
+    if (this == &source){ return *this; }
+    delete _image;
+    
+    _chatLogic = source._chatLogic;
+    _rootNode = source._rootNode;
+    _image = new wxBitmap(*source._image);
+
+    std::cout << "ChatBot Assignment Operator" << std::endl;
+
+    return *this;
+}
+
 ////
 //// EOF STUDENT CODE
 
