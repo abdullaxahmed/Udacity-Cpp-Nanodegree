@@ -88,6 +88,8 @@ ChatBot &ChatBot::operator=(ChatBot&& source) noexcept
     _currentNode = source._currentNode;
     _image = source._image;
 
+    _chatLogic->SetChatbotHandle(this);
+
     source._chatLogic = nullptr;
     source._rootNode = nullptr;
     source._currentNode = nullptr;
@@ -97,6 +99,7 @@ ChatBot &ChatBot::operator=(ChatBot&& source) noexcept
 
     return *this;
 }
+
 
 ////
 //// EOF STUDENT CODE
