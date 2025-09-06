@@ -37,6 +37,7 @@ TrafficLight::TrafficLight()
 {
     _currentPhase = TrafficLightPhase::red;
 }
+TrafficLight::~TrafficLight() = default;
 
 void TrafficLight::waitForGreen()
 {
