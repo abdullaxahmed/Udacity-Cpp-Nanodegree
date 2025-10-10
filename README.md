@@ -38,7 +38,18 @@ This project involves building a simplified version of the Linux `htop` process 
   <em>System monitor displaying CPU, memory, and process information</em>
 </p>
 
-
+<p align="center">
+  <a href="https://github.com/abdullaxahmed/Udacity-Cpp-Nanodegree/tree/main/Project-2%20System%20Monitor" style="
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #165798e1;
+    border-radius: 6px;
+    text-decoration: none;
+  ">📂 /Project 2</a>
+</p>
 
 ### Project 3 – Memory Management Chatbot
 
