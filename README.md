@@ -108,7 +108,7 @@ This project simulates traffic flow at intersections using concurrent programmin
 A high-performance C++ application for real-time vehicle detection using OpenCV's background subtraction and contour analysis techniques. This capstone project synthesizes all concepts learned throughout the nanodegree program, including OOP, memory management, and concurrency.
 
 <p align="center">
-  <img src="images/Vehicle Detection.png" alt="Vehicle Detection Preview" width="600"/>
+  <img src="images/Vehicle Detection.gif" alt="Vehicle Detection Preview" width="600"/>
 </p>
 <p align="center">
   <em>Real-time vehicle detection with MOG2 background subtraction</em>
